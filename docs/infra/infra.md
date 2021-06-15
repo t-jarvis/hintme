@@ -1,13 +1,20 @@
 ---
 layout: default
-title: UI Components
-nav_order: 9
-has_children: true
-permalink: /docs/ui-components
-nav_exclude: true
+title: Infrastructure
+nav_order: 3
+# has_children: true
+permalink: /docs/infrastructure
 ---
 
-# UI Components
+# Infrastructure
 
 To make it as easy as possible to write documentation in plain Markdown, most UI components are styled using default Markdown elements with few additional CSS classes needed.
 {: .fs-6 .fw-300 }
+
+## This in processing
+
+- GCP
+
+- AWS
+
+- Azure
