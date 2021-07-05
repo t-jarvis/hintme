@@ -1,7 +1,7 @@
 ---
 layout: default
 title: MySQL
-parent: Cheatsheet
+parent: Database
 nav_order: 1
 ---
 

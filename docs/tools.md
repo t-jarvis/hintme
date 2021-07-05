@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Tools & IDE
-nav_order: 7
+nav_order: 8
 ---
 
 # Tools & IDE
