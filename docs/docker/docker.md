@@ -1,12 +1,11 @@
 ---
 layout: default
 title: Docker
-parent: Devops
+nav_order: 5
 has_children: true
-nav_order: 2
 ---
 
-# Docker
+# Cheatsheet docker
 {: .no_toc }
 
 ## Table of contents
@@ -18,8 +17,29 @@ nav_order: 2
 
 
 ---
-## Cheatsheet
+## Manage images
+### Docker build
+{: .no_toc }
 
+Create an image from a Dockerfile.
+{: .no_toc }
+
+```markdown
+docker build [options] .
+  -t "app/container_name"    # name
+  --build-arg APP_HOME=$APP_HOME    # Set build-time variables
+
+```
+### Delete image.
+{: .no_toc }
+
+```markdown
+ddocker rmi b750fe78269d
+```
+
+
+---
+## Manage containers
 ### Docker start
 Start/stop a container.
 {: .no_toc }
@@ -34,18 +54,6 @@ docker stop [options] CONTAINER
 ## E.g
 ```
 
----
-### Docker build
-Create an image from a Dockerfile.
-{: .no_toc }
-
-```markdown
-docker build [options] .
-  -t "app/container_name"    # name
-  --build-arg APP_HOME=$APP_HOME    # Set build-time variables
-
-## E.g
-```
 ---
 
 ### Docker create
@@ -96,4 +104,35 @@ docker exec [options] CONTAINER COMMAND
 ## E.g
 $ docker exec app_web_1 tail logs/development.log
 $ docker exec -t -i app_web_1 rails c
+```
+
+---
+
+## Clean up
+ - Cleans up dangling images, containers, volumes, and networks (ie, not associated with a container).
+
+{: .no_toc }
+
+```markdown
+docker system prune -a
+```
+
+- Container
+{: .no_toc }
+```markdown
+# Stop all running containers
+docker stop $(docker ps -a -q)
+
+# Delete stopped containers
+docker container prune
+```
+- Delete all the images.
+{: .no_toc }
+```markdown
+#docker image prune [-a]
+```
+- Docker volume prune
+{: .no_toc }
+```markdown
+docker volume prune
 ```

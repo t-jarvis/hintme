@@ -23,12 +23,18 @@ nav_order: 1
 
 ```markdown
 mysqldump -u Username -p dbNameYouWant > databasename_backup.sql
+# For other server.
+mysqldump -u Username -h yourServerIP  -p dbNameYouWant > fileNameYouSave.sql
 ```
+
+
 ### Restore from backup SQL File
 {: .no_toc }
 
 ```markdown
 mysql - u Username -p dbNameYouWant < databasename_backup.sql;
+# For other server.
+mysql -h yourServerIP -u Username -p dbNameYouWant < databasename_backup.sql;
 ```
 
 
@@ -43,3 +49,7 @@ SHOW CREATE TABLE table;
 SHOW PROCESSLIST;
 KILL process_number;
 ```
+
+{% highlight some_language %}
+hi
+{% endhighlight %}
