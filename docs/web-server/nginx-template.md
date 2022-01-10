@@ -24,16 +24,27 @@ Create config file for web static. E.g: ReactJS
 {: .no_toc }
 
 ```bash
+
 server {
-    listen       ${PORT:-80};
-    server_name  _;
+  listen 80;
+  server_name _ ;
+  # ssl_certificate /etc/ssl/file.pem;
+  # ssl_certificate_key /etc/ssl/private/file.pem;
+  #       ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
+  #	add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
 
-    root /usr/share/nginx/html;
-    index index.html;
+  root /var/www/gf-customer/build;
+  index index.html index.htm index.nginx-debian.html;
 
-    location / {
-        try_files $$uri /index.html;
+
+  location / {
+    root /var/www/welcome/build;
+    index index.html index.nginx-debian.html;
+    if ( $uri = '/index.html' ) {
+      add_header Cache-Control no-store always;
     }
+    try_files $uri $uri/ /index.html;
+  }
 }
 ```
 
