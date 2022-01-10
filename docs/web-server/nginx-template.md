@@ -33,7 +33,7 @@ server {
   #       ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
   #	add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
 
-  root /var/www/gf-customer/build;
+  root /var/www/welcome/build;
   index index.html index.htm index.nginx-debian.html;
 
 
