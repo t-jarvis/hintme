@@ -23,3 +23,11 @@ nav_order: 7
 ```markdown
 rsync -avzhe ssh  --progress  /localPathServer  username@<IP>:/remotePathServer 
 ```
+
+SSH tunnel
+{: .no_toc }
+
+```markdown
+ssh -N -L IPlocal:3306:IPRemote:3306 userName@IPRemote
+```
+
