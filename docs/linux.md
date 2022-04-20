@@ -31,3 +31,9 @@ SSH tunnel
 ssh -N -L IPlocal:3306:IPRemote:3306 userName@IPRemote
 ```
 
+List port
+
+```markdown
+lsof -i tcp:3000
+```
+

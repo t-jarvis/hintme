@@ -18,8 +18,7 @@ nav_order: 2
 
 ---
 
-### Backup Database to SQL.
-{: .no_toc }
+### Create database, Grant
 
 ```markdown
 CREATE USER tester WITH PASSWORD 'test_password';
@@ -27,11 +26,8 @@ CREATE USER tester WITH PASSWORD 'test_password';
 $ GRANT ALL PRIVILEGES ON DATABASE db_name to username;
 
 # Clone database postgres
-$ createdb -O ownername -T originaldb newdb
+$ createdb -O ownername -T originaldb new_db_name;
 ```
 
 
 
-{% highlight some_language %}
-hi
-{% endhighlight %}
