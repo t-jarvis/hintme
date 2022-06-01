@@ -15,6 +15,13 @@ nav_order: 7
 
 ---
 
+### Create SSH key
+
+```markdown
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+
 ### Transfer files between servers.
 
  Use it when you want to copy some files between servers.
