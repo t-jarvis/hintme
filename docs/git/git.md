@@ -18,6 +18,15 @@ nav_order: 6
 
 ---
 
+### General
+
+```markdown
+# Create new branch without need to checkout
+gco -b feature/NJ-ticket-stg origin/deploy/stg
+
+# Cherry pick range of commit From [commit-a] to [commit-b]
+gcp [commit-a]^..[commit-b]
+```
 
 ### Getting from remote
 

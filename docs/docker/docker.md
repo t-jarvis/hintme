@@ -65,6 +65,11 @@ Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiu
 {: .no_toc }
 
 ```markdown
+## E.g
+$ docker create --name app_redis_1 \
+  --expose 6379 \
+  redis:3.0.2
+
 docker create [options] IMAGE
   -a, --attach               # attach stdout/err
   -i, --interactive          # attach stdin (interactive)
@@ -77,10 +82,7 @@ docker create [options] IMAGE
   -v, --volume `pwd`:/app    # mount (absolute paths needed)
   -e, --env NAME=hello       # env vars
 
-## E.g
-$ docker create --name app_redis_1 \
-  --expose 6379 \
-  redis:3.0.2
+
 ```
 
 ---
@@ -90,8 +92,6 @@ $ docker create --name app_redis_1 \
 Code can be rendered inline by wrapping it in single back ticks.
 
 <div class="code-example" markdown="1">
-Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
 ## Heading with `<inline code snippet>` in it.
 {: .no_toc }
 </div>
