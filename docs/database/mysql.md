@@ -23,6 +23,9 @@ GRANT PRIVILEGE ON database.table TO 'username'@'host';
 
 # Grant all previleges
 GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+
+#Clone database
+mysqldump -u <user> --password=<password> <DATABASE_NAME> | mysql -u <user> --password=<password> -h <hostname> <DATABASE_NAME_NEW>
 ```
 
 
